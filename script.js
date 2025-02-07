@@ -10,23 +10,23 @@ const username = document.getElementById('username').Value.trim()
 const email = document.getElementById('email').Value.trim()
 const password = document.getElementById('password').value.trim()
 
-const isValid = true;
+let isValid = true;
 const messages = []
 if (username.value.length < 3) {
     isValid = false;
     return;
 } else {
-    messages.textContent = "Username is not long enough"
+    messages.push("Username must be at lest 3 characters long")
 }
-if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(emailInput.value)) {
+if (!email.includes('@') || !email.includes('.')) {
     isValid = false;
     return;
 } else {
-    messages.textContent = "Invalid Email"
+    messages.push('Email must contain both "@" and "." characters')
 }
 if (password.value.length < 8) {
     isValid = false;
 } else{
-    messages.textContent = "Password is too Short"
+    messages.push("Password is too Short")
 }
 })
