@@ -6,7 +6,19 @@ async function fetchUserData () {
         const users = await response.json()
      }
      catch(error){
-        
+
      }
-    
+    dataContainer.innerHTML = "";
+    const userList = <ul></ul>
+    const users = [
+        {name: 'Charles Effiong'},
+        {name: 'Emediong Francies'},
+        {name: 'Charles Effiong'},
+        {name: 'Emediong Francies'},
+        {name: 'Charles Effiong'},
+        {name: 'Emediong Francies'},
+        {name: 'Charles Effiong'},
+        {name: 'Emediong Francies'},
+        
+    ]
 }
