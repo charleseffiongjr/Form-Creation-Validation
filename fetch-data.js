@@ -3,7 +3,8 @@ async function fetchUserData () {
      const dataContainer = document.getElementById("api-data");
      try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        const users = await response.json('https://jsonplaceholder.typicode.com/users')
+        const users = await response.json()
      }
+     catch('error')
     
 }
