@@ -5,17 +5,11 @@ const form = document.getElementById('registration-form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 });
-const feedbackDiv = getElementById('form-feedback').style.display('block')
-if (isValid) {
-    feedbackDiv.textContent = 'Registration successful!';
-    feedbackDiv.style.color = '#28a745'; // Success green
-  } else {
-    feedbackDiv.innerHTML = messages.join('<br>');
-    feedbackDiv.style.color = '#dc3545'; // Error red
-  }
+const feedbackDiv = getElementById('form-feedback')
 const username = document.getElementById('username').Value.trim()
 const email = document.getElementById('email').Value.trim()
 const password = document.getElementById('password').value.trim()
+
 
 let isValid = true;
 const messages = []
@@ -36,6 +30,14 @@ if (password.length < 8) {
 } else{
     messages.push("Password is too Short");
 }
-
+feedbackDiv.style.display = 'block';
+if (isValid) {
+    
+    feedbackDiv.textContent = 'Registration successful!';
+    feedbackDiv.style.color = '#28a745'; // Success green
+  } else {
+    feedbackDiv.innerHTML = messages.join('<br>');
+    feedbackDiv.style.color = '#dc3545'; // Error red
+  }
 
 })
