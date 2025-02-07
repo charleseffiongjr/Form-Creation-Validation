@@ -19,19 +19,19 @@ const password = document.getElementById('password').value.trim()
 
 let isValid = true;
 const messages = []
-if (username.value.length < 3) {
+if (username.length < 3) {
     isValid = false;
     return;
 } else {
     messages.push("Username must be at lest 3 characters long")
 }
-if (!email.includes('@') || !email.includes('.')) {
+if (!email.length.includes('@') || !email.length.includes('.')) {
     isValid = false;
     return;
 } else {
     messages.push('Email must contain both "@" and "." characters')
 }
-if (password.value.length < 8) {
+if (password.length < 8) {
     isValid = false;
 } else{
     messages.push("Password is too Short");
