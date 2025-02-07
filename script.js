@@ -5,7 +5,11 @@ const form = document.getElementById('registration-form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 });
-const feedbackDiv = getElementById('form-feedback')
+const feedbackDiv = getElementById('form-feedback').style.display('block')
+if (feedbackDiv){
+    isvalid = true;
+    feedbackDiv.textContent("Registration Succesfull")
+}
 const username = document.getElementById('username').Value.trim()
 const email = document.getElementById('email').Value.trim()
 const password = document.getElementById('password').value.trim()
@@ -29,4 +33,5 @@ if (password.value.length < 8) {
 } else{
     messages.push("Password is too Short")
 }
+
 })
